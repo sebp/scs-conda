@@ -1,0 +1,29 @@
+# The language in this case has no bearing - we are going to be making use of conda.
+language: generic
+
+os: osx
+
+# Set BINSTAR_TOKEN
+env:
+    global:
+        secure: ""
+
+before_install:
+    # Remove homebrew.
+    - |
+      echo ""
+      echo "Removing homebrew from Travis CI to avoid conflicts."
+      curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+      chmod +x ~/uninstall_homebrew
+      ~/uninstall_homebrew -fq
+      rm ~/uninstall_homebrew
+
+install:
+    # Install Miniconda.
+    - ./install_miniconda.sh
+
+script:
+    - source ~/miniconda/bin/activate root
+    - conda build ./recipe
+    # from https://github.com/conda-forge/conda-forge-build-setup-feedstock/blob/master/recipe/upload_or_check_non_existence.py
+    - ./upload_or_check_non_existence ./recipe sebp --channel=main
