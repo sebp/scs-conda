@@ -6,7 +6,8 @@ os: osx
 # Set BINSTAR_TOKEN
 env:
     global:
-        secure: ""
+        secure: "AxqWRuYvy0Cdh9JcBYP+2rlU+/Wen4WH/P4l4BkMHtuB/szp/SadxB2cTvJtFu/KXIgyWQro0iQ240bHa/RU8uYTZfF2uTyxRAvQZ+ZGLXxa9J2huLHZ0X5u/2ID8T2n8V/jnp++T/Qb89aBgvjuBJgRIEXDxS+f0LIJhwSqH5fBnLKMXiGBjwH97sx+mcepgjwqNG2Gdk+zI27/S5Y7HxmMw1Jdj4m+F8nYTKxA+nmplpcEvDlH9BlEXlG2plTJecKoqroLN+Q0coHEQCsgxV3z9rFC3RZB9T/y2Ivnx/plaJ2Q8gUBF/Hk/BXcKiXFE98LKftWpDa2+wV7BvleovkhcJU2iGkYmzcfMxrCIUqB40N8cVyAAaP/Fk7lGHGJOd/2gW7RwG7/zjqTO6nhfWmsQ4n2vLjKXdxoG/ClzHZ/rQAt6djibpCDgOrKRwIuCPNxF9CGI0+jTXCezH2S68zskwf4+6mESfaYHfHzuMFuNw1VfIM/vfuZJLHMoAZ6xQoYN72UJvwNQoI0aia6fUticqL4Kol1nONZzv/zbuwqRTCiWM+ezsCxoYwH3zCImh6RarMpmHbs7zK2CzR6xW5MPHrVNoYUvBbJSBFwhIepO4JDzfY2tJbE/BX/VnYwFULbeg7Eqs/F6ch9mMtm4KkLfY7Cy5y9Fw4DMKNG7KI="
+
 
 before_install:
     # Remove homebrew.
