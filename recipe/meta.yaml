@@ -1,6 +1,6 @@
 {% set name = "scs" %}
-{% set version = "1.2.7" %}
-{% set sha256 = "e284517e31bd8aac2e1e022376c46bade26d55ce4ef078cf796a9e70ab2b2433" %}
+{% set version = "2.0.2" %}
+{% set sha256 = "c468a475c49327599d9e89fa1aff1ba6196cc967df5364d74db66de4fceab65a" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 6
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
