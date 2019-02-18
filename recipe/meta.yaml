@@ -11,6 +11,9 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
+  patches:
+    - long_int_type.patch
+
 build:
   # noarch_python: True
   # preserve_egg_dir: True

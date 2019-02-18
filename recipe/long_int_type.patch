@@ -1,0 +1,19 @@
+diff -Naur scs-2.0.2.org/src/scsmodule.c scs-2.0.2/src/scsmodule.c
+--- scs-2.0.2.org/src/scsmodule.c	2017-12-01 00:20:19.000000000 +0100
++++ scs-2.0.2/src/scsmodule.c	2019-02-18 18:10:47.165460611 +0100
+@@ -287,11 +287,11 @@
+ /* parse the arguments and ensure they are the correct type */
+ #ifdef DLONG
+ #ifdef SFLOAT
+-  char *argparse_string = "(ll)O!O!O!O!O!O!|O!O!O!lfffffl";
+-  char *outarg_string = "{s:l,s:l,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:s}";
++  char *argparse_string = "(LL)O!O!O!O!O!O!|O!O!O!LfffffL";
++  char *outarg_string = "{s:L,s:L,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:f,s:s}";
+ #else
+-  char *argparse_string = "(ll)O!O!O!O!O!O!|O!O!O!ldddddl";
+-  char *outarg_string = "{s:l,s:l,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:s}";
++  char *argparse_string = "(LL)O!O!O!O!O!O!|O!O!O!LdddddL";
++  char *outarg_string = "{s:L,s:L,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:d,s:s}";
+ #endif
+ #else
+ #ifdef SFLOAT
