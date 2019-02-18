@@ -5,8 +5,7 @@ environment:
   # see https://www.appveyor.com/docs/build-environment/#python
   matrix:
     - TARGET_ARCH: "x64"
-      CONDA_PY: "36"
-      CONDA_INSTALL_LOCN: "C:\\Miniconda36-x64"
+      CONDA_INSTALL_LOCN: "C:\\Miniconda3-x64"
   BINSTAR_TOKEN:
     secure: DGPGrFqoxtMtPBg/+wuwyiKW16oKg6EVgaJsuH3i8Ho+MIQ5WvWhnr82Y0FG5RuC
 
