@@ -35,29 +35,25 @@ requirements:
     - python
     - setuptools
     - numpy
-    - scipy >=0.13.2
+    - blas=*=mkl
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - mkl
+    - blas=*=mkl
     - scipy >=0.13.2
 
 test:
   # Python imports
   imports:
     - scs
-
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
+    - _scs_direct
+    - _scs_indirect
+  requires:
+    - nose
+  source_files:
+    - test/
+  commands:
+    - nosetests test
 
 about:
   home: http://github.com/cvxgrp/scs
