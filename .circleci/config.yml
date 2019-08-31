@@ -15,12 +15,12 @@ jobs:
       - run:
           name: Build package
           command: |
-            source ~/miniconda/bin/activate root
+            source ~/miniconda/bin/activate base
             conda build ./recipe
 
       # Upload
       - run:
           name: Upload packages
           command: |
-            source ~/miniconda/bin/activate root
+            source ~/miniconda/bin/activate base
             ./upload_or_check_non_existence ./recipe sebp --channel=main
