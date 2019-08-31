@@ -1,10 +1,10 @@
 {% set name = "scs" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "c468a475c49327599d9e89fa1aff1ba6196cc967df5364d74db66de4fceab65a" %}
+{% set version = "2.1.1-2" %}
+{% set sha256 = "f816cfe3d4b4cff3ac2b8b96588c5960ddd2a3dc946bda6b09db04e7bc6577f2" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version|replace('-', '.') }}"  # 2.1.1-2 => 2.1.1.2
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
@@ -61,7 +61,17 @@ test:
 about:
   home: http://github.com/cvxgrp/scs
   license: MIT
-  summary: 'scs: splitting conic solver'
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'Python interface for SCS, which solves convex cone problems'
+  description: |
+    Solves convex cone programs via operator splitting.
+    Can solve: linear programs (LPs), second-order cone programs (SOCPs),
+    semidefinite programs (SDPs), exponential cone programs (ECPs),
+    and power cone programs (PCPs), or problems with any combination of
+    those cones.
+  doc_url: https://github.com/bodono/scs-python
+  dev_url: https://github.com/bodono/scs-python
 
 # See
 # http://docs.continuum.io/conda/build.html for
