@@ -39,11 +39,11 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - blas=*=mkl
+    - mkl-devel  # [blas_impl == "mkl"]
+    - openblas-devel  # [blas_impl == "openblas"]
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - blas=*=mkl
     - scipy >=0.13.2
 
 test:
