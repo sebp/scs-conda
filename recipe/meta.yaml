@@ -4,7 +4,7 @@
 
 package:
   name: {{ name|lower }}
-  version: "{{ version|replace('-', '.') }}"  # 2.1.1-2 => 2.1.1.2
+  version: "{{ version|replace('-', '.post') }}"  # 2.1.1-2 => 2.1.1.post2
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
@@ -28,7 +28,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv
 
 requirements:
