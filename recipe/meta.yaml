@@ -1,6 +1,6 @@
 {% set name = "scs" %}
-{% set version = "2.1.1-2" %}
-{% set sha256 = "f816cfe3d4b4cff3ac2b8b96588c5960ddd2a3dc946bda6b09db04e7bc6577f2" %}
+{% set version = "2.1.2" %}
+{% set sha256 = "667ed6019bb4e2f925bd9291161d2c61cc0077443094437b703ea905333fd585" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv
 
 requirements:
